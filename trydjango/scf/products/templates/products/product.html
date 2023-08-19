@@ -1,0 +1,21 @@
+
+<!-- {% for product in products %}
+
+	{% if product == my_pro %}
+		<li><strong><a href="{% url 'products:product-detail' product.id %}">{{ product.title }}</a></strong></li>
+	{% else %}
+		<li><a href="{% url 'products:product-detail' product.id %}">{{ product.title }}</a></li>
+	{% endif %}
+
+{% endfor %}
+
+ -->
+
+
+
+
+<ul>
+	{% for product in my_products %}
+		<li><strong><a href="{% url 'products:product-detail' product.id %}">{{ product.title }}</a></strong></li>
+	{% endfor %}
+</ul>

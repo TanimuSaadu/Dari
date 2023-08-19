@@ -1,0 +1,18 @@
+{% extends 'products/base.html' %}
+
+{% block title %}Home page{% endblock title %}
+{% block content %}
+	<h1>Home html</h1>
+	<p>This is the home page template</p>
+
+	<h2>{{ mystr }} </h2>
+	<p>{{ list }} </p>
+
+	{% for a in list %}
+		{% if a != None and a != 'hello world' %}
+			<p>{{a}}</p>
+		{% else %}
+			<p>{{ a|add:5 }}</p>
+		{% endif %}
+	{% endfor %}
+{% endblock %}
